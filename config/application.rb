@@ -47,5 +47,9 @@ module OssServer
     # Configure oauth2
     config.oauth.database = Mongo::Connection.new["oss_server_development"]
     config.oauth.param_authentication = true
+    config.oauth.authenticator = lambda do |username, password|
+      user = User.where(email: username).first
+      user if user && user.valid_password?(password)
+    end
   end
 end
