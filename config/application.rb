@@ -43,5 +43,9 @@ module OssServer
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    # Configure oauth2
+    config.oauth.database = Mongo::Connection.new["oss_server_development"]
+    config.oauth.param_authentication = true
   end
 end
