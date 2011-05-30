@@ -1,0 +1,9 @@
+1306683908
+CLIENT_ID	/home/dobri/Sites/oauth2-provider/examples/client/app.rb	CLIENT_ID =
+CLIENT_SECRET	/home/dobri/Sites/oauth2-provider/examples/client/app.rb	CLIENT_SECRET =
+RESOURCE_HOST	/home/dobri/Sites/oauth2-provider/examples/client/app.rb	RESOURCE_HOST =
+access_token	/home/dobri/Sites/oauth2-provider/examples/client/app.rb	  def access_token
+access_token_url	/home/dobri/Sites/oauth2-provider/examples/client/app.rb	  def access_token_url
+authorize_url	/home/dobri/Sites/oauth2-provider/examples/client/app.rb	  def authorize_url
+get_with_access_token	/home/dobri/Sites/oauth2-provider/examples/client/app.rb	  def get_with_access_token(path)
+redirect_uri	/home/dobri/Sites/oauth2-provider/examples/client/app.rb	  def redirect_uri
