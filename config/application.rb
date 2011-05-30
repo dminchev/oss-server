@@ -48,8 +48,13 @@ module OssServer
     config.oauth.database = Mongo::Connection.new["oss_server_development"]
     config.oauth.param_authentication = true
     config.oauth.authenticator = lambda do |username, password|
-      user = User.where(email: username).first
-      user if user && user.valid_password?(password)
+      user = User.where(:email => username).first
+      user.id.to_s if user && user.valid_password?(password)
     end
+    
+    config.after_initialize do
+      Rack::OAuth2::Server::Admin.set :client_id, "4de253dd1d41c82212000001"
+      Rack::OAuth2::Server::Admin.set :client_secret, "1028818150eb5f19db86bce4c86d92a2ba85fa314738b53983244a17eb8d4a95"
+    end    
   end
 end

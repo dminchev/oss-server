@@ -1,0 +1,17 @@
+Application name:	client
+Application URL:	http://localhost:9292/
+Redirect URI:		http://localhost:9292/
+Scope (space separated names):		
+Registered client
+ID	4de2531f1d41c821f7000001
+Secret	f14e425b1fe4b737ea172b8d57630cac01516df60b2e9887897f5f7230f16706
+
+
+
+curl -i http://localhost:3000/oauth/access_token \
+    -F grant_type=password \
+    -F client_id=4de2531f1d41c821f7000001 \
+    -F client_secret=f14e425b1fe4b737ea172b8d57630cac01516df60b2e9887897f5f7230f16706 \
+    -F "scope=" \
+    -F username=dobri@ob.com \
+    -F password=123123
